@@ -1,0 +1,20 @@
+.header {
+  text-transform: capitalize;
+}
+
+.title {
+  margin: 3rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dateWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addBtn {
+  font-weight: bold;
+}

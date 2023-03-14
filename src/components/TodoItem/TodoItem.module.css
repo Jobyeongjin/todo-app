@@ -1,0 +1,57 @@
+.todoItem {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 1.2rem;
+  box-shadow: 3px 3px 5px 2px #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 300ms;
+  margin-bottom: 1.2rem;
+}
+
+.todoItem:not(.complete):hover {
+  top: -5px;
+  left: -10px;
+}
+
+.todoItem.complete {
+  background-color: gray;
+  opacity: 0.3;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.btns button {
+  margin-left: 8px;
+  opacity: 0.4;
+  transition: opacity 300ms;
+}
+
+.todoItem:not(.complete) .btns button:hover {
+  opacity: 1;
+}
+
+.completeBtn {
+  border-color: green;
+  color: green;
+}
+
+.deleteBtn {
+  border-color: red;
+  color: red;
+}
