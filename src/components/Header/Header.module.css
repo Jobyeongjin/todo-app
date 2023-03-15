@@ -7,6 +7,10 @@
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 72px;
+  background: linear-gradient(to right, #ddd, #b435cd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .dateWrap {
@@ -17,4 +21,12 @@
 
 .addBtn {
   font-weight: bold;
+  border: none;
+  background-color: #b435cd;
+  opacity: 0.85;
+}
+
+.addBtn:hover {
+  opacity: 1;
+  transform: scale(1.2) translate(-10%) rotate(-25deg);
 }

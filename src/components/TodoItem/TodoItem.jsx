@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './TodoItem.module.css';
 import DetailModal from '../Modals/Detail/DetailModal';
 
-export default function TodoItem({ item }) {
+export default function TodoItem({ todoList, setTodoList, item }) {
   const { id, title, content, createdAt, updatedAt, isComplete } = item;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,6 +12,13 @@ export default function TodoItem({ item }) {
   const onCloseModal = () => {
     setIsOpen(false);
   };
+
+  const onClickDelete = (id) => {
+    const deleteList = todoList.filter((todo) => todo.id !== id);
+    setTodoList(deleteList);
+  };
+
+  const handleDelete = () => onClickDelete(id);
 
   return (
     <>
@@ -30,7 +37,9 @@ export default function TodoItem({ item }) {
             {isComplete ? 'incompleted' : 'completed'}
           </button>
           <button className={styles.editBtn}>edit</button>
-          <button className={styles.deleteBtn}>delete</button>
+          <button className={styles.deleteBtn} onClick={handleDelete}>
+            delete
+          </button>
         </div>
       </li>
       <DetailModal item={item} isOpen={isOpen} onClose={onCloseModal} />

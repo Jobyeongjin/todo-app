@@ -13,7 +13,7 @@ export default function DetailModal({ item, isOpen, onClose }) {
         <h1 className={styles.modalTitle}>title</h1>
         <p>{title}</p>
         <h1 className={styles.modalTitle}>content</h1>
-        <p>{content}</p>
+        <p className={styles.itemContent}>{content}</p>
         <h1 className={styles.modalTitle}>createdAt</h1>
         <p>{createdAt}</p>
         <h1 className={styles.modalTitle}>updatedAt</h1>
