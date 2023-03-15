@@ -8,7 +8,7 @@
   font-weight: bold;
   text-transform: uppercase;
   font-size: 72px;
-  background: linear-gradient(to right, #ddd, #b435cd);
+  background: linear-gradient(to right, #000, #b435cd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

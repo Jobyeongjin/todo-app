@@ -28,8 +28,8 @@ export default function Header({ setTodoList }) {
       id: uuidv4(),
       title: value.title,
       content: value.content,
-      createdAt: dayjs().format('YY.MM.DD'),
-      updatedAt: dayjs().format('YY.MM.DD'),
+      createdAt: dayjs().format('YY.MM.DD HH:mm:ss'),
+      updatedAt: dayjs().format('YY.MM.DD HH:mm:ss'),
       isComplete: false,
     };
 
