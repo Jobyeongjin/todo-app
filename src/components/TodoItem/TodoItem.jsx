@@ -20,6 +20,19 @@ export default function TodoItem({ todoList, setTodoList, item }) {
 
   const handleDelete = () => onClickDelete(id);
 
+  const onClickComplete = (id) => {
+    const updatedList = todoList.reduce((acc, cur) => {
+      if (cur.id === id) {
+        return [...acc, { ...cur, isComplete: !cur.isComplete }];
+      }
+      return [...acc, cur];
+    }, []);
+
+    setTodoList(updatedList);
+  };
+
+  const handleComplete = () => onClickComplete(id);
+
   return (
     <>
       <li
@@ -33,7 +46,7 @@ export default function TodoItem({ todoList, setTodoList, item }) {
           <time className={styles.date}>{createdAt}</time>
         </div>
         <div className={styles.btns}>
-          <button className={styles.completeBtn}>
+          <button className={styles.completeBtn} onClick={handleComplete}>
             {isComplete ? 'incompleted' : 'completed'}
           </button>
           <button className={styles.editBtn}>edit</button>
